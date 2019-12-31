@@ -32,6 +32,14 @@ for files in fileList:
         shutil.move(path + files, path + "Excel Files/" + files)
     elif pdfFilesRegExp.search(files) and not os.path.exists(path + "Pdf Files/" + files):
         shutil.move(path + files, path + "Pdf Files/" + files)
+os.system("pause")
+
+
+
+
+
+
+
 
 
 
