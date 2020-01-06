@@ -17,7 +17,7 @@ def FileSorter():
     executablesRegExp = re.compile(r'\.(exe|msi)$', re.IGNORECASE)
     textFilesRegExp = re.compile(r'\.(txt|doc(x)?)$', re.IGNORECASE)
     imagesRegExp = re.compile(r'\.(jp(e)?g|png|tiff)$', re.IGNORECASE)
-    excelFilesRegExp = re.compile(r'\.(xlsx|xlsm)$', re.IGNORECASE)
+    excelFilesRegExp = re.compile(r'\.(xlsx|xlsm|csv)$', re.IGNORECASE)
     pdfFilesRegExp = re.compile(r'\.(pdf)$', re.IGNORECASE)
 
     for i in folder_names:
