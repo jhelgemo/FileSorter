@@ -55,7 +55,7 @@ def FileSorter():
         elif pdfFilesRegExp.search(file) and os.path.exists(path + "Pdf Files/" + file):
             os.rename(path + file, path + "duplicate_" + str(datetime.now().strftime("%d%m%Y%H%M%S")) + "_" + file)
 
-    threading.Timer(10,FileSorter).start()
+    threading.Timer(5, FileSorter).start()
 FileSorter()
 
 
