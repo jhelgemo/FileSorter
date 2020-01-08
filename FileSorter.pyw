@@ -53,29 +53,29 @@ def FileSorter():
             shutil.move(path + file, path + "Images/" + file)
         elif imagesRegExp.search(file) and os.path.exists(path + "Images/" + file):
             os.rename(path + file,
-                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S") +
-                      splitFileName[1])
+                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S")
+                      + splitFileName[1])
 
         elif excelFilesRegExp.search(file) and not os.path.exists(path + "Excel Files/" + file):
             shutil.move(path + file, path + "Excel Files/" + file)
         elif excelFilesRegExp.search(file) and os.path.exists(path + "Excel Files/" + file):
             os.rename(path + file,
-                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S") +
-                      splitFileName[1])
+                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S")
+                      + splitFileName[1])
 
         elif pdfFilesRegExp.search(file) and not os.path.exists(path + "Pdf Files/" + file):
             shutil.move(path + file, path + "Pdf Files/" + file)
         elif pdfFilesRegExp.search(file) and os.path.exists(path + "Pdf Files/" + file):
             os.rename(path + file,
-                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S") +
-                      splitFileName[1])
+                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S")
+                      + splitFileName[1])
 
         elif XMLFilesRegExp.search(file) and not os.path.exists(path + "XML Files/" + file):
             shutil.move(path + file, path + "XML Files/" + file)
         elif XMLFilesRegExp.search(file) and os.path.exists(path + "XML Files/" + file):
             os.rename(path + file,
-                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S") +
-                      splitFileName[1])
+                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S")
+                      + splitFileName[1])
 
     threading.Timer(5, FileSorter).start()
 
