@@ -32,8 +32,9 @@ def FileSorter():
         if compressedFilesRegExp.search(file) and not os.path.exists(path + "Compressed Files/" + file):
             shutil.move(path + file, path + "Compressed Files/" + file)
         elif compressedFilesRegExp.search(file) and os.path.exists(path + "Compressed Files/" + file):
-            os.rename(path + file, path + "duplicate_" + splitFileName[0] + "_"
-                      + datetime.now().strftime("%d-%m-%Y-%H.%M.%S") + splitFileName[1])
+            os.rename(path + file,
+                      path + "duplicate_" + splitFileName[0] + "_" + datetime.now().strftime("%d-%m-%Y-%H.%M.%S")
+                      + splitFileName[1])
 
         elif executablesRegExp.search(file) and not os.path.exists(path + "Executables/" + file):
             shutil.move(path + file, path + "Executables/" + file)
